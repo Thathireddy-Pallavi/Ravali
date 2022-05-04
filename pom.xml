@@ -1,57 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
+2
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.6</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.demo</groupId>
-	<artifactId>firstapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>myapp-5</name>
-	<description>Demo project for Spring Boot</description>
-	<properties>
-		<java.version>11.0.14</java.version>
-		<maven-surefire-plugin.version>3.8.5</maven-surefire-plugin.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+3
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+4
+    <modelVersion>4.0.0</modelVersion>
+5
+6
+    <parent>
+7
+        <groupId>com.sasa.multipleversions.examples</groupId>
+8
+        <artifactId>multiple-java-versions</artifactId>
+9
+        <version>1.0.0</version>
+10
+    </parent>
+11
+12
+    <artifactId>module-jdk-11</artifactId>
+13
+14
+    <properties>
+15
+        <maven.compiler.source>11</maven.compiler.source>
+16
+        <maven.compiler.target>11</maven.compiler.target>
+17
+    </properties>
+18
+19
+    <build>
+20
+        <pluginManagement>
+21
+            <plugins>
+22
+                <plugin>
+23
+                    <groupId>org.apache.maven.plugins</groupId>
+24
+                    <artifactId>maven-surefire-plugin</artifactId>
+25
+                    <version>3.0.0-M4</version>
+26
+                </plugin>
+27
+            </plugins>
+28
+        </pluginManagement>
+29
+30
+        <plugins>
+31
+            <plugin>
+32
+                <groupId>org.apache.maven.plugins</groupId>
+33
+                <artifactId>maven-toolchains-plugin</artifactId>
+34
+                <executions>
+35
+                    <execution>
+36
+                        <goals>
+37
+                            <goal>toolchain</goal>
+38
+                        </goals>
+39
+                        <configuration>
+40
+                            <toolchains>
+41
+                                <jdk>
+42
+                                    <version>11</version>
+43
+                                </jdk>
+44
+                            </toolchains>
+45
+                        </configuration>
+46
+                    </execution>
+47
+                </executions>
+48
+            </plugin>
+49
+        </plugins>
+50
+    </build>
+51
+52
+    <dependencies>
+53
+        <dependency>
+54
+            <groupId>javax.validation</groupId>
+55
+            <artifactId>validation-api</artifactId>
+56
+            <version>2.0.0.Final</version>
+57
+        </dependency>
+58
+        <dependency>
+59
+            <groupId>junit</groupId>
+60
+            <artifactId>junit</artifactId>
+61
+            <version>4.4</version>
+62
+            <scope>test</scope>
+63
+        </dependency>
+64
+    </dependencies>
+65
+66
 </project>
+67
