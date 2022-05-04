@@ -1,35 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-2
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-3
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-4
-    <modelVersion>4.0.0</modelVersion>
-5
-6
-    <parent>
-7
-        <groupId>com.sasa.multipleversions.examples</groupId>
-8
-        <artifactId>multiple-java-versions</artifactId>
-9
-        <version>1.0.0</version>
-10
-    </parent>
-11
-12
-    <artifactId>module-jdk-11</artifactId>
-13
-14
-    <properties>
-15
-        <maven.compiler.source>11</maven.compiler.source>
-16
-        <maven.compiler.target>11</maven.compiler.target>
-17
-    </properties>
-18
-19<dependencies>
+<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -67,5 +36,3 @@
 	</build>
 
 </project>
-
-   
